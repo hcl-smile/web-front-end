@@ -10,7 +10,8 @@ const Home: NextPage = () => {
   const [info,setInfo]= useState<{name:string}>(data)
 
   useEffect(() => {
-    fetch('/hello').then(res => {
+    fetch('/api/name').then(res => {
+      console.log(res, 'mmm')
       setInfo(res as unknown as {name:string})
     })
   }, [])
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">{info.name}</a>
+          Welcome to <a href="https://nextjs.org">heelll</a>
         </h1>
 
         <p className={styles.description}>
